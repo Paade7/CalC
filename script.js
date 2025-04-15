@@ -1,33 +1,43 @@
 let calculationDone = false;
+const display = document.getElementById("dis");
+
 
 //takes mouse input for numbers
 function appear(value) {
   if (calculationDone) {
-    document.getElementById("dis").value = "";
+    display.innerText = "";
     calculationDone = false;
   }
-  document.getElementById("dis").value += value;
+  if(display.innerHTML=="0"){
+    display.innerText ="";
+    display.innerText += value;
+  }
+  else
+  display.innerText += value;
 }
 
 // for AC function
 function allClear() {
-  document.getElementById("dis").value = "";
+  document.getElementById("dis").innerText = "0";
 }
 
 // for C function
 function Clear() {
-  const display = document.getElementById("dis");
   if (calculationDone) {
-    display.value = "";
-  } else {
-    display.value = display.value.slice(0, -1);
+    display.innerText = "0";
+  }
+  else {
+    display.innerText = display.innerText.slice(0, -1);
+    if(display.innerText.length==0){
+      display.innerText="0";
+    }
   }
 }
 
 // calculates the dis
 function calculate() {
-  let result = eval(document.getElementById("dis").value);
-  document.getElementById("dis").value = result;
+  let result = eval(document.getElementById("dis").innerText);
+  document.getElementById("dis").innerText = result;
   calculationDone = true;
 }
 
