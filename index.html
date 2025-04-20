@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CalC</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="full">
+      <div class="calc">
+        <h1>Calculator</h1>
+        <input type="text" id="dis" disabled />
+        <div class="keys">
+          <button onclick="allClear()" class="key a">AC</button>
+          <button onclick="Clear()" class="key a">C</button>
+          <button onclick="appear('%')" class="key p">%</button>
+          <button onclick="appear('\/')" class="key d">/</button>
+          <button onclick="appear('7')" class="key s">7</button>
+          <button onclick="appear('8')" class="key e">8</button>
+          <button onclick="appear('9')" class="key n">9</button>
+          <button onclick="appear('*')" class="key m">*</button>
+          <button onclick="appear('4')" class="key f">4</button>
+          <button onclick="appear('5')" class="key fi">5</button>
+          <button onclick="appear('6')" class="key si">6</button>
+          <button onclick="appear('-')" class="key s">-</button>
+          <button onclick="appear('1')" class="key o">1</button>
+          <button onclick="appear('2')" class="key t">2</button>
+          <button onclick="appear('3')" class="key th">3</button>
+          <button onclick="appear('+')" class="key ad">+</button>
+          <button onclick="appear('0')" class="key z">0</button>
+          <button onclick="appear('00')" class="key zz">00</button>
+          <button onclick="appear('.')" class="key do">.</button>
+          <button onclick="calculate('=')" class="key eq">=</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
